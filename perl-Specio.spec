@@ -11,9 +11,12 @@
 
 Name:		%{?scl_prefix}perl-Specio
 Version:	0.44
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Type constraints and coercions for Perl
-License:	Artistic 2.0
+# lib/Specio/PartialDump.pm:	GPL+ or Artistic
+#				<https://github.com/houseabsolute/Specio/issues/17>
+# other files:			Artistic 2.0
+License:	Artistic 2.0 and (GPL+ or Artistic)
 URL:		https://metacpan.org/release/Specio
 Source0:	https://cpan.metacpan.org/modules/by-module/Test/Specio-%{version}.tar.gz
 BuildArch:	noarch
@@ -161,6 +164,9 @@ types.
 %{_mandir}/man3/Test::Specio.3*
 
 %changelog
+* Tue Feb 18 2020 Petr Pisar <ppisar@redhat.com> - 0.44-3
+- Correct a perl-Specio license to "Artistic 2.0 and (GPL+ or Artistic)"
+
 * Mon Jan 06 2020 Jitka Plesnikova <jplesnik@redhat.com> - 0.44-2
 - SCL
 
