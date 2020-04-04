@@ -11,7 +11,7 @@
 
 Name:		%{?scl_prefix}perl-Specio
 Version:	0.44
-Release:	4%{?dist}
+Release:	3%{?dist}
 Summary:	Type constraints and coercions for Perl
 # lib/Specio/PartialDump.pm:	GPL+ or Artistic
 #				<https://github.com/houseabsolute/Specio/issues/17>
@@ -92,12 +92,12 @@ type to a variable at all.
 Instead, you can explicitly check a value against a type, and optionally coerce
 values to that type.
 
-%package -n %{?scl_prefix}perl-Test-Specio
+%package -n perl-Test-Specio
 Summary:	Test helpers for Specio
 License:	Artistic 2.0
 Requires:	%{name} = %{version}-%{release}
 
-%description -n %{?scl_prefix}perl-Test-Specio
+%description -n perl-Test-Specio
 This package provides some helper functions and variables for testing Specio
 types.
 
@@ -159,14 +159,11 @@ types.
 %{_mandir}/man3/Specio::Subs.3*
 %{_mandir}/man3/Specio::TypeChecks.3*
 
-%files -n %{?scl_prefix}perl-Test-Specio
+%files -n perl-Test-Specio
 %{perl_vendorlib}/Test/
 %{_mandir}/man3/Test::Specio.3*
 
 %changelog
-* Tue Feb 18 2020 Petr Pisar <ppisar@redhat.com> - 0.44-4
-- SCLize perl-Test-Specio subpackage name
-
 * Tue Feb 18 2020 Petr Pisar <ppisar@redhat.com> - 0.44-3
 - Correct a perl-Specio license to "Artistic 2.0 and (GPL+ or Artistic)"
 
